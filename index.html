@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Precious' Ropper's Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-image: linear-gradient(to bottom, #ffd700, #ff8c00);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width: 768px) {
+          img {
+            margin-top: 20px;
+          }
+        }
+
+        #dark-mode-toggle {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dark-mode {
+            background-color: #111;
+            color: #ddd;
+        }
+
+        .dark-mode #dark-mode-toggle {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .dark-mode img.invert-on-dark {
+            filter: invert(1);
+        }
+    </style>
+</head>
 <body>
-<h1>Precious' Ropper's Archive</h1>
-<h2>This simple html layout will serve as a respository for all the assignments I am able to save throughout my time completing the Ropper's Academy Computing Fundamentals course. </h2>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-<p>I have never worked with HTML beyond Inspect Element before taking Computing Fundamentals, so I apologize if this site looks really incoherent.</p>
-<p>Click the button to skip the images and get free crypto (so you can buy ice-cream!)  :)</p>
+    <h1>Precious' Ropper's Archive (v2)</h1>
+    <h2>Now with AI help! This simple html layout will serve as a repository for all the assignments I am able to save throughout my time completing the Ropper's Academy Computing Fundamentals course.</h2>
+    <p>I have never worked with HTML beyond Inspect Element before taking Computing Fundamentals, so I apologize if this site looks really incoherent.</p>
+    <p>Click the button to skip the images and get free crypto [so you can buy ice-cream!] :)</p>
+    <button id="myButton" class="float-left submit-button">Click Me</button>
 
-<button id="myButton" class="float-left submit-button" >Click Me</button>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "https://ipfs.thirdwebcdn.com/ipfs/bafybeicsqr6tpttw362o2ynigoygw63olsrksqccjez22vzb3cxidiek2y/Ropper%27s%20Conclusion.txt";
+        };
+    </script>
 
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "https://ipfs.thirdwebcdn.com/ipfs/bafybeicsqr6tpttw362o2ynigoygw63olsrksqccjez22vzb3cxidiek2y/Ropper%27s%20Conclusion.txt";
-    };
-</script>
+    <img src="https://raw.githubusercontent.com/hoppersroppers/hoppersroppers.github.io/main/_layouts/constitution.jpg"/>
+    <img src="https://media.badgr.com/uploads/badges/7f5a546b-3f69-446c-a5dc-0753e5bec59f.png"/>
+    <img src="https://raw.githubusercontent.com/hoppersroppers/hoppersroppers.github.io/master/_layouts/compass.png"/>
+    <img class="invert-on-dark" src="https://assets.website-files.com/5dfc18aeef0cf97edeb5ccd2/5f19d1aab04287627a5ce386_IPFS_logo.png"/>
+    <img src="https://images.sftcdn.net/images/t_optimized,f_auto/p/5d1af966-96d1-11e6-90fa-00163ec9f5fa/3757934708/ubuntu-logo.jpg"/>
 
-
-<img src="https://raw.githubusercontent.com/hoppersroppers/hoppersroppers.github.io/main/_layouts/constitution.jpg"/>
-
-<img src="https://media.badgr.com/uploads/badges/7f5a546b-3f69-446c-a5dc-0753e5bec59f.png"/>
-
-<img src="https://raw.githubusercontent.com/hoppersroppers/hoppersroppers.github.io/master/_layouts/compass.png"/>
-
-<img src="https://assets.website-files.com/5dfc18aeef0cf97edeb5ccd2/5f19d1aab04287627a5ce386_IPFS_logo.png"/>
-
-<img src="https://images.sftcdn.net/images/t_optimized,f_auto/p/5d1af966-96d1-11e6-90fa-00163ec9f5fa/3757934708/ubuntu-logo.jpg"/>
-
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-</script>
-
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
